@@ -12,12 +12,3 @@ function previewImage(e){
         preview.src = '';
     }
 }
-document.getElementById('fileInput').addEventListener('change', function (e) {
-    const fileInput = e.target;
-    const label = document.getElementById('fileLabel');
-    if (fileInput.files.length > 0) {
-        label.textContent = fileInput.files[0].name; 
-    } else {
-        label.textContent = "Choose File"; 
-    }
-});
