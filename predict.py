@@ -24,5 +24,5 @@ confidence = round(confidence * 100, 2)
 with open("result.txt", "w") as f:
     f.write(f"Prediction: {label}\n")
     f.write(f"Confidence: {confidence}%\n")
-
+print(label)
 print("Prediction complete. Check result.txt")
