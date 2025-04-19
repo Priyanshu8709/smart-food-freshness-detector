@@ -2,6 +2,7 @@ import os
 from tensorflow.keras.preprocessing.image import ImageDataGenerator # type: ignore
 from tensorflow.keras.models import Sequential # type: ignore
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout # type: ignore
+from PIL import Image # type: ignore
 
 # Dataset directory
 data_dir = 'dataset'
