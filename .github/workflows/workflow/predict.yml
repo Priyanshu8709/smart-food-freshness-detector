@@ -1,0 +1,29 @@
+name: Run Prediction
+
+on:
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10
+
+    - name: Install TensorFlow
+      run: pip install tensorflow
+
+    - name: Run prediction script
+      run: python predict_and_save.py
+
+    - name: Upload result.txt
+      uses: actions/upload-artifact@v3
+      with:
+        name: prediction-result
+        path: result.txt
