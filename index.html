@@ -8,18 +8,18 @@
 </head>
 <body class="bg-slate-900 flex flex-col items-center justify-center min-h-screen p-4">
 <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl sm:max-w-2xl lg:max-w-2xl xl:max-w-3xl mx-auto text-center flex flex-col items-center min-h-[30vh] sm:justify-center sm:p-12 sm:sclae-125">
-  <!-- Heading at the top -->
+ 
   <h1 class="text-3xl font-bold text-gray-800 mb-6 self-center">Upload your Food image</h1>
 
-  <!-- Upload Section -->
+ 
   <div class="flex flex-col items-center sm:mt-4">
-    <!-- Image Preview -->
+    
     <img id="previewImage" src="#" alt="Image Preview" class="w-48 h-48 object-cover rounded-lg shadow-md mb-6 hidden" />
 
-    <!-- File Upload -->
+    
     <input type="file" id="fileInput" class="mb-4 p-2 border-2 border-gray-300 rounded-md" accept="image/*" onchange="previewFile()" />
 
-    <!-- Button -->
+   
     <button id="uploadButton" onclick="uploadImageAndFetchResult()" class="bg-gray-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition sm:mt-2">
       Check Freshness
     </button>
