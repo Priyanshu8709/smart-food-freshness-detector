@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Food Freshness Checker</title>
-  <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind link -->
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <script src="dist/script.js"></script> 
 </head>
 <body class="bg-slate-900 flex flex-col items-center justify-center min-h-screen p-4">
 <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl sm:max-w-2xl lg:max-w-2xl xl:max-w-3xl mx-auto text-center flex flex-col items-center min-h-[30vh] sm:justify-center sm:p-12 sm:sclae-125">
@@ -19,19 +20,17 @@
     <input type="file" id="fileInput" class="mb-4 p-2 border-2 border-gray-300 rounded-md" accept="image/*" onchange="previewFile()" />
 
     <!-- Button -->
-    <button onclick="checkFreshness()" class="bg-gray-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition sm:mt-2">
+    <button id="uploadButton" onclick="uploadImageAndFetchResult()" class="bg-gray-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition sm:mt-2">
       Check Freshness
     </button>
   </div>
 </div>
 
-<!-- Spinner -->
+
 <div id="spinner" class="border-4 border-gray-300 border-t-green-500 rounded-full w-12 h-12 animate-spin mt-8 hidden"></div>
 
-<!-- Result -->
-<h2 id="resultText" class="text-2xl font-semibold text-gray-700 mt-8"></h2>
 
-<script src="dist/script.js"></script>
+<p id="resultDisplay" class="text-2xl font-semibold text-gray-700 mt-8"></p>
 
 </body>
 </html>
