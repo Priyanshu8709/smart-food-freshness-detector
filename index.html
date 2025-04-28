@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling -->
   <title>Food Freshness Checker</title>
   <script src="https://cdn.tailwindcss.com"></script> 
   <script src="script.js"></script> 
@@ -9,41 +10,42 @@
 <body class="bg-slate-900 flex flex-col items-center justify-center min-h-screen p-4">
   
   <div>
-    <h1 class="text-3xl sm:text-4xl font-bold text-cyan-300 mb-4 border-b-4 border-cyan-300 inline-block">
-  Food Freshness Checker
-</h1>
+    <h1 class="text-3xl sm:text-4xl font-bold text-cyan-300 mb-6 border-b-4 border-cyan-300 inline-block">
+      Food Freshness Checker
+    </h1>
   </div>
-  <div class="bg-gray-100 shadow-lg rounded-lg p-6 w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto text-center flex flex-col items-center min-h-[30vh] sm:justify-center sm:p-8 sm:scale-100 lg:scale-90 xl:scale-75">
+  <div class="bg-gray-100 shadow-lg rounded-lg p-8 w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto text-center flex flex-col items-center min-h-[40vh] sm:justify-center sm:p-10 sm:scale-110 lg:scale-100">
     
-    <p class="text-base sm:text-lg text-gray-600 mb-6">Upload an image of your food, and we'll analyze its freshness using advanced AI technology.</p>
+    <p class="text-lg sm:text-xl text-gray-600 mb-8">
+      Upload an image of your food, and we'll analyze its freshness using advanced AI technology.
+    </p>
     
-    <div class="flex flex-col items-center sm:mt-4">
+    <div class="flex flex-col items-center sm:mt-6">
       
-     
-      <img id="previewImage" src="#" alt="Image Preview" class="w-32 h-32 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-cover rounded-lg shadow-md mb-4 hidden" />
+      <img id="previewImage" src="#" alt="Image Preview" class="w-40 h-40 sm:w-56 sm:h-56 lg:w-64 lg:h-64 object-cover rounded-lg shadow-md mb-6 hidden" />
 
-      <input type="file" id="fileInput" class="mb-4 sm:mb-6 p-2 sm:p-3 border-2 border-gray-300 rounded-md bg-cyan-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-cyan-300 transition duration-200" accept="image/*" onchange="previewFile()" />
+      <input type="file" id="fileInput" class="mb-6 sm:mb-8 p-3 sm:p-4 border-2 border-gray-300 rounded-md bg-cyan-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-cyan-300 transition duration-200" accept="image/*" onchange="previewFile()" />
       
-     
-      <button id="uploadButton" onclick="uploadImageAndFetchResult()" class="bg-cyan-300 hover:bg-slate-900 hover:text-cyan-300 text-slate-900 font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition sm:mt-2">
+      <button id="uploadButton" onclick="uploadImageAndFetchResult()" class="bg-cyan-300 hover:bg-slate-900 hover:text-cyan-300 text-slate-900 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition sm:mt-4">
         Upload Image
       </button>
-      
     </div>
   </div>
 
   <!-- Spinner -->
-  <div id="spinner" class="border-4 border-gray-300 border-t-green-500 rounded-full w-10 h-10 sm:w-12 sm:h-12 animate-spin mt-8 hidden"></div>
+  <div id="spinner" class="border-4 border-gray-300 border-t-green-500 rounded-full w-12 h-12 sm:w-16 sm:h-16 animate-spin mt-10 hidden"></div>
 
   <!-- Result Section -->
-  <div class="mt-8 text-center">
-    <p id="resultDisplay" class="text-lg sm:text-xl font-semibold text-cyan-300"></p>
+  <div class="mt-10 text-center">
+    <p id="resultDisplay" class="text-xl sm:text-2xl font-semibold text-cyan-300"></p>
   </div>
 
   <!-- Additional Information Section -->
-  <div class="bg-gray-100 shadow-md rounded-lg p-4 sm:p-6 w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto mt-8 text-center">
-    <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">How It Works</h2>
-    <p class="text-sm sm:text-base text-gray-600 mb-4">Our AI-powered Food Freshness Checker analyzes the uploaded image to determine the freshness of your food. It uses advanced image recognition and machine learning algorithms to provide accurate results.</p>
+  <div class="bg-gray-100 shadow-md rounded-lg p-6 sm:p-8 w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto mt-10 text-center">
+    <h2 class="text-lg sm:text-xl font-bold text-gray-800 mb-6">How It Works</h2>
+    <p class="text-sm sm:text-base text-gray-600 mb-6">
+      Our AI-powered Food Freshness Checker analyzes the uploaded image to determine the freshness of your food. It uses advanced image recognition and machine learning algorithms to provide accurate results.
+    </p>
     <ul class="list-disc list-inside text-left text-gray-600 text-sm sm:text-base">
       <li>Upload a clear image of your food.</li>
       <li>Click the "Check Freshness" button.</li>
@@ -52,7 +54,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="mt-8 text-center text-gray-500 text-xs sm:text-sm">
+  <footer class="mt-10 text-center text-gray-500 text-sm sm:text-base">
     <p>&copy; 2025 Food Freshness Checker. All rights reserved.</p>
   </footer>
 </body>
