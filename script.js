@@ -66,6 +66,21 @@ async function uploadImageAndFetchResult() {
 
     reader.readAsDataURL(file);
 }
+function runColab() {
+    
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbw8yJ2_0jeON-KIODodly9aaPeKHnGlYpMoLzxpT2XjjUnG4tqqZtpQBjaH6fKlUZZ4/exec'; 
+
+    fetch(scriptUrl, {
+      method: 'GET',
+      mode: 'no-cors'
+    })
+    .then(response => {
+      console.log('Colab Notebook triggered successfully');
+    })
+    .catch(error => {
+      console.error('Error triggering Colab notebook:', error);
+    });
+  }
 
 async function fetchResult(retryCount) {
     const MAX_RETRIES = 3;
