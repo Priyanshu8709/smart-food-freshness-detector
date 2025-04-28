@@ -24,7 +24,14 @@
       
       <img id="previewImage" src="#" alt="Image Preview" class="w-40 h-40 sm:w-56 sm:h-56 lg:w-64 lg:h-64 object-cover rounded-lg shadow-md mb-6 hidden" />
 
-      <input type="file" id="fileInput" class="mb-6 sm:mb-8 p-3 sm:p-4 border-2 border-gray-300 rounded-md bg-cyan-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-cyan-300 transition duration-200" accept="image/*" onchange="previewFile()" />
+      <input 
+  type="file" 
+  id="fileInput" 
+  class="w-full max-w-[14rem] sm:max-w-[16rem] mb-6 sm:mb-8 p-2 sm:p-3 border-2 border-gray-300 rounded-md bg-cyan-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-cyan-300 transition duration-200" 
+  accept="image/*" 
+  onchange="previewFile()" 
+/>
+
       
       <button id="uploadButton" onclick="uploadImageAndFetchResult()" class="bg-cyan-300 hover:bg-slate-900 hover:text-cyan-300 text-slate-900 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition sm:mt-4">
         Upload Image
